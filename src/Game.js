@@ -16,7 +16,7 @@ function Game() {
         setGameVisible(true); // show the game when session starts
 
         // Play clock sound
-        const audio = new Audio('/assets/tone.mp3');
+        const audio = new Audio('/assets/ClickSound.mp3');
         audio.play();// Decrease the counter every second
         const interval = setInterval(() => {
             setCounter((prevCounter) => {
