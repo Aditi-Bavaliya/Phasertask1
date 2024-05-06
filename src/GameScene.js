@@ -29,7 +29,7 @@ const GameScene = () => {
         function preload() {
             this.load.setBaseURL('https://labs.phaser.io');
             this.load.image('bg', 'assets/skies/sky4.png');
-            this.load.image('ball', 'assets/particles/red.png');
+            this.load.image('ball', '/assets/ball.png');
 
         }
 
