@@ -36,42 +36,10 @@ const GameScene = () => {
         function create() {
 
             this.add.image(400, 300, 'sky');
-
-            // const ball = this.physics.add.sprite(200, 150, 'ball')
-            //     .setVelocity(300, -200)
-            //     .setCollideWorldBounds(true, 1, 1, true);
-
-            // ball.body.acceleration.x = 500; // increase acceleration in x direction
-            // ball.body.acceleration.y = 500; // increase acceleration in y direction
-
-            // this.physics.world.on('worldbounds', (body, up, down, left, right) => {
-            //     const { gameObject } = body;
-
-            //     if (up) { gameObject.setAngle(90); }
-            //     else if (down) { gameObject.setAngle(-90); }
-            //     else if (left) { gameObject.setAngle(0); }
-            //     else if (right) { gameObject.setAngle(180); }
-            // });
             const ball = this.physics.add.sprite(400, 300, 'ball');
             ball.setCollideWorldBounds(true);
             ball.setBounce(1);
             ball.setVelocity(Phaser.Math.Between(-500, 500), Phaser.Math.Between(-500, 500));
-
-            // const clockSound = this.sound.add('ClickSound');
-
-            // const countdown = setInterval(() => {
-            //     setCounter(prevCounter => {
-            //         if (prevCounter > 0) {
-            //             clockSound.play();
-            //             return prevCounter - 1;
-            //         } else {
-            //             clearInterval(countdown);
-            //             endSession();
-            //             ball.setVelocity(0, 0);
-            //             return 0;
-            //         }
-            //     });
-            // }, 1000);
 
         }
     }, []);
@@ -80,3 +48,4 @@ const GameScene = () => {
 };
 
 export default GameScene;
+
