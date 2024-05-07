@@ -53,19 +53,20 @@ function Game() {
     };
 
     return (
-        <div>
-            <button onClick={startSession} className='start-button'>Start Game</button>
+       <div>
             <h2>Session History:</h2>
             {sessionId ? (
                 <div>
                     <p>Session ID: {sessionId}</p>
                     <p className='counter'>Counter: {counter}</p>
                 </div>
-            ) : null}
+            ) : (
+                <button onClick={startSession} className='start-button'>Start Game</button>
+            )}
             {session && (
                 <p className='session-info'>
                     Session ID: {session.sessionId}, Started at{' '}
-                    {new Date(session.startTime).toLocaleString()}, Ended at{' '}
+                     {new Date(session.startTime).toLocaleString()}, Ended at{' '}
                     {new Date(session.endTime).toLocaleString()}
                 </p>
             )}
